@@ -8,7 +8,11 @@ import pandas as pd
 # Importing the dataset
 dataset = pd.read_csv('Data.csv')
 X = dataset.iloc[:, :-1].values
-y = dataset.iloc[:, 3].values
+y = dataset.iloc[:, -1].values #-1 instead of 3
+
+## Fixing missing data ##
+
+## Encoding categorical data ##
 
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
