@@ -88,12 +88,24 @@ regressor_OLS.summary()
 # But for this model we follow strictly with backwd elimination
 
 X_opt = X[:,[0,3]]
+#Method 1: use Ordinarly Least square to create the model
 regressor_OLS = sm.OLS(endog = Y, exog = X_opt).fit()
 regressor_OLS.summary() 
+
+X_opt_train, X_opt_test = train_test_split(X_opt, test_size = 0.2, random_state = 0)
+Y_OLS_pred = regressor_OLS.predict(X_opt_test)
 
 # Only R& D spent is left
 # This example happends to be a linear regression
 
+# Visualizing the test set result WE can visualize because it turns out to be a linear regression
 
-
-
+plt.scatter(X_opt_test[:,1], Y_test, color = 'yellow')
+plt.plot(X_opt_train[:,1], regressor_OLS.predict(X_opt_train), 'blue')
+# same regression line as plt.plot(X_opt_test[:,1], regressor_OLS.predict(X_opt_test), 'red') 
+# The object regressor has already learnt through training set. 
+# So the regression line is the same
+plt.title('Profit vs R&D (Test Set)')
+plt.xlabel('R&D Spend')
+plt.ylabel('Profit')
+plt.show
