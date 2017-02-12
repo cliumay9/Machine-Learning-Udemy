@@ -21,6 +21,7 @@ lin_reg.fit(X, Y)
 
 
 ##  Fitting Polynomial Regression to the data set ##
+# Building a nonlinear regression model
 # Import polynomial class, PolynomialFeatures.(simply add polynomial terms)
 from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 4)
@@ -40,10 +41,10 @@ plt.title('Position level VS Salary (Linear Regression)')
 plt.xlabel('Position Level')
 plt.ylabel('Salary')
 #Visualizing the Poly Reg Ressults
-X_grid = np.arange(min(X), max(X),0.1)
-X_grid = X_grid.reshape((len(X_grid)),1) #More Continuous Curve
+X_grid = np.arange(min(X), max(X),0.1) #More Continuous Curve
+X_grid = X_grid.reshape((len(X_grid)),1)  #use reshape to a matrix row len(n) and column 1
 plt.scatter(X, Y, color = 'red')
-plt.plot(X, lin_reg_2.predict(poly_reg.fit_transform(X)), 'blue') #USe lin_reg.predict
+plt.plot(X_grid, lin_reg_2.predict(poly_reg.fit_transform(X_grid)), 'blue') #USe lin_reg.predict
 plt.title('Position level VS Salary (Poly Regression)')
 plt.xlabel('Position Level')
 plt.ylabel('Salary')
