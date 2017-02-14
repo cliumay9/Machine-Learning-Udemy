@@ -13,7 +13,7 @@ regressor = svm(Salary ~.,
                 data = dataset,
                 type = 'eps-regression',
                 kernel = 'radial')
-
+# Note the highest position level is an outlier so it was ignored by the model.
 
 # Predicting a new result
 y_pred = predict(regressor, data.frame(Level = 6.5))
