@@ -21,7 +21,7 @@ dataset$Purchased = factor(dataset$Purchased, levels = c('Yes', 'No'), labels = 
 library(caTools)
 
 #To provide consistency and reprodcution of the same result #set.seed()
-set.seed(123)
+# set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.8)  #Split Ratio of training data
 training_set = subset(dataset, split == TRUE)
 testing_set = subset(dataset, split == FALSE)
