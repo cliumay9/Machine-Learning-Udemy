@@ -16,9 +16,9 @@ from itertools import chain
 
 
 # Meta informations.
-__version__ = '1.1.1'
-__author__ = 'Yu Mochizuki'
-__author_email__ = 'ymoch.dev@gmail.com'
+__version__ = '0.0.1'
+__author__ = 'Calvin Liu'
+__author_email__ = 'cliumay9@gmail.com'
 
 
 ################################################################################
@@ -262,12 +262,9 @@ def apriori(transactions, **kwargs):
         raise ValueError('minimum support must be > 0')
 
     # For testing.
-    _gen_support_records = kwargs.get(
-        '_gen_support_records', gen_support_records)
-    _gen_ordered_statistics = kwargs.get(
-        '_gen_ordered_statistics', gen_ordered_statistics)
-    _filter_ordered_statistics = kwargs.get(
-        '_filter_ordered_statistics', filter_ordered_statistics)
+    _gen_support_records = kwargs.get('_gen_support_records', gen_support_records)
+    _gen_ordered_statistics = kwargs.get('_gen_ordered_statistics', gen_ordered_statistics)
+    _filter_ordered_statistics = kwargs.get('_filter_ordered_statistics', filter_ordered_statistics)
 
     # Calculate supports.
     transaction_manager = TransactionManager.create(transactions)
