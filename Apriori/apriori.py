@@ -28,3 +28,4 @@ rules = apriori(transactions, min_support=0.003,
 
 # Visualizing the results
 results = list(rules)
+myResults = [list(x) for x in results]
