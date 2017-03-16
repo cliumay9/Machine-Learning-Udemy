@@ -1,6 +1,7 @@
 # SVR
+# Remember to install the packages for the library
 # Make sure to set the right working directory
-
+setwd("~/Desktop/Ex_Files_DSF_DataMining/Machine-Learning-Udemy/SupportVectorRegression")
 # Importing the dataset
 dataset = read.csv('PositionSalaries.csv')
 dataset = dataset[2:3]

@@ -44,3 +44,10 @@ for n in range(0, N):
     # Find the version of ad such that UCB is maximized
 
 # Visualizing results as historgram
+plt.hist(ads_selected)
+plt.title('Histogram of Ads Selection with UCB Algorithm')
+plt.xlabel('Ads')
+plt.ylabel('# of times each ad was selected')
+
+
+
