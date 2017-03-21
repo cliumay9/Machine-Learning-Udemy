@@ -52,6 +52,7 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
+# No need to feature scale Ys because they return binary
 
 #### Creating the Artificial Neural Network Classifier###
 
@@ -76,6 +77,7 @@ classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 're
 # kernel_initializer to initialize the weight close to zero uniformly and use 
 # rectifier activation function relu
 # Add second new hidden layers
+# Dense(*) add a fully connected ANN
 
 classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
 # Since we have 2 hidden layers for our ANN for simplicity now we adding the output layer
