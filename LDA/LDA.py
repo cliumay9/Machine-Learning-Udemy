@@ -1,7 +1,9 @@
 # Linear Discriminant Analysis (LDA)
 """
 extract new independent vairables that seperates the most classes of the dependent vairables
-Thus, its a supervised Model
+Thus, its a supervised Model.
+
+Summary: Preprocess the data > Apply LDA > Use Linear model, i.e. Logistic Regression
 """
 # Importing libraries
 import numpy as np

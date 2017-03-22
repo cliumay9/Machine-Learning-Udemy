@@ -7,6 +7,8 @@
   Predict which customer segments does each new wine recommended to
   Without dimensional reduction, we need 13 dimension to plot the data
   PCA > unsupervised model
+  
+  Summary: Preprocess the data > Apply PCA > Use linear classifier - Logistic Regression
 """
 # Importing libraries
 import numpy as np
