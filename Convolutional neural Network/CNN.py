@@ -81,7 +81,7 @@ test_set = test_datagen.flow_from_directory('dataset/test_set', target_size=(64,
 # choose higher target size will definitely get more accuracy as we have more data
 
 classifier.fit_generator(training_set, steps_per_epoch=8000,
-                         epochs=25, validation_data=test_set,
+                         epochs=10, validation_data=test_set,
                          nb_val_samples=2000)
 # samples_per_epoch number of training set, num_val_samples number of test set
 
